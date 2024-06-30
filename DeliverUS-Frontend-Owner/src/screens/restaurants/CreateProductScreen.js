@@ -18,7 +18,7 @@ export default function CreateProductScreen ({ navigation, route }) {
   const [productCategories, setProductCategories] = useState([])
   const [backendErrors, setBackendErrors] = useState()
 
-  const initialProductValues = { name: null, description: null, price: null, order: null, restaurantId: route.params.id, productCategoryId: null, availability: true }
+  const initialProductValues = { name: null, description: null, grasas: 0.0, proteinas: 0.0, carbohidratos: 0.0,  price: null, order: null, restaurantId: route.params.id, productCategoryId: null, availability: true }
   const validationSchema = yup.object().shape({
     name: yup
       .string()
@@ -28,6 +28,18 @@ export default function CreateProductScreen ({ navigation, route }) {
       .number()
       .positive('Please provide a positive price value')
       .required('Price is required'),
+    grasas: yup
+      .positive('Please provide a positive grasas value')
+      .required('Grasas is required')
+    ,
+    proteinas: yup
+      .positive('Please provide a positive proteinas value')
+      .required('Proteinas is required')
+    ,
+    carbohidratos: yup
+      .positive('Please provide a positive carbohidratos value')
+      .required('Carbohidratos is required')
+    ,
     order: yup
       .number()
       .nullable()
@@ -111,6 +123,19 @@ export default function CreateProductScreen ({ navigation, route }) {
                 name='description'
                 label='Description:'
               />
+              <InputItem
+                name='grasas'
+                label='Grasas:'
+              />
+              <InputItem
+                name='proteinas'
+                label='proteinas:'
+              />
+              <InputItem
+                name='carbohidratos'
+                label='Carbohidratos:'
+              />
+             
               <InputItem
                 name='price'
                 label='Price:'

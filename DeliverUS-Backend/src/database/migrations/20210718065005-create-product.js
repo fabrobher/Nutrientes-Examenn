@@ -14,6 +14,24 @@ module.exports = {
       description: {
         type: Sequelize.TEXT
       },
+      
+      grasas:{
+        type: Sequelize.DOUBLE,
+        defaultValue: 0.0
+      },
+      proteinas:{
+        type: Sequelize.DOUBLE,
+        defaultValue: 0.0
+      },
+      carbohidratos:{
+        type: Sequelize.DOUBLE,
+        defaultValue: 0.0
+      },
+      calorias:{
+        type: Sequelize.DOUBLE,
+        defaultValue: 0.0
+      },
+      
       price: {
         allowNull: false,
         type: Sequelize.DOUBLE
