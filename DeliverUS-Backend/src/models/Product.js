@@ -24,16 +24,16 @@ const loadModel = (sequelize, DataTypes) => {
     
     grasas: {
       type: DataTypes.DOUBLE,
-      defaulValue: 0.0
+      defaultValue: 0.0
     },
     proteinas : {
       type: DataTypes.DOUBLE,
-      defaulValue: 0.0
+      defaultValue: 0.0
 
     },
     carbohidratos: {
       type: DataTypes.DOUBLE,
-      defaulValue: 0.0
+      defaultValue: 0.0
     },
     calorias: {
       type: DataTypes.DOUBLE,

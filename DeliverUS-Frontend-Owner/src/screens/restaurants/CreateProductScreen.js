@@ -29,14 +29,17 @@ export default function CreateProductScreen ({ navigation, route }) {
       .positive('Please provide a positive price value')
       .required('Price is required'),
     grasas: yup
+      .number()
       .positive('Please provide a positive grasas value')
       .required('Grasas is required')
     ,
     proteinas: yup
+      .number()
       .positive('Please provide a positive proteinas value')
       .required('Proteinas is required')
     ,
     carbohidratos: yup
+      .number()
       .positive('Please provide a positive carbohidratos value')
       .required('Carbohidratos is required')
     ,
